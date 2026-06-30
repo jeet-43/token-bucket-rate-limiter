@@ -2,7 +2,6 @@
 
 import time
 
-
 class TokenBucket:
     """Controls how many requests can go through by spending and refilling tokens."""
 
