@@ -2,6 +2,7 @@
 
 import time
 
+
 class TokenBucket:
     """Controls how many requests can go through by spending and refilling tokens."""
 
@@ -12,6 +13,11 @@ class TokenBucket:
         capacity: the most tokens we can store at once
         refill_rate: how many tokens come back each second
         """
+        if capacity <= 0:
+            raise ValueError("capacity must be greater than 0")
+        if refill_rate < 0:
+            raise ValueError("refill_rate cannot be negative")
+
         self.capacity = capacity
         self.refill_rate = refill_rate
         self.tokens = capacity
