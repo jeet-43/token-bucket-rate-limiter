@@ -47,3 +47,9 @@ class TokenBucket:
             return True
 
         return False
+
+    def __repr__(self) -> str:
+        return (
+            f"TokenBucket(capacity={self.capacity}, refill_rate={self.refill_rate}, "
+            f"tokens={self.tokens:.2f})"
+        )
