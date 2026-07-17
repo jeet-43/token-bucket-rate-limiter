@@ -53,3 +53,4 @@ class TokenBucket:
             f"TokenBucket(capacity={self.capacity}, refill_rate={self.refill_rate}, "
             f"tokens={self.tokens:.2f})"
         )
+        
